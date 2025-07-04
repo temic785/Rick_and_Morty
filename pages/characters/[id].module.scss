@@ -1,5 +1,40 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px
+}
+
+.goToBack {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 28px;
+  color: #e0ffe3;
+  background: transparent;
+  border: 2px solid #59e6c1;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #59e6c1,
+  0 0 30px rgba(89, 230, 193, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+  color 0.3s ease,
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
+  user-select: none;
+
+  &:hover {
+    background-color: #59e6c1;
+    color: #171717;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 20px #59e6c1,
+    0 0 50px rgba(89, 230, 193, 0.7);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.95);
+    box-shadow: none;
+    background-color: #3bd6b0;
+    color: #0a0a0a;
+  }
 }

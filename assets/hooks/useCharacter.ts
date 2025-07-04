@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Nullabel } from "@/assets/types"
-import { CharacterType } from "@/assets/hooks/useCharacters"
 import { useRouter } from "next/router"
+import { Nullable } from "@/assets/types/Nullable"
+import { CharacterType } from "@/assets/api/rick-and-morty-api"
 
-export const useCharacter = (): Nullabel<CharacterType> => {
-  const [character, setCharacter] = useState<Nullabel<CharacterType>>(null)
+export const useCharacter = (): Nullable<CharacterType> => {
+  const [character, setCharacter] = useState<Nullable<CharacterType>>(null)
 
   const router = useRouter()
 

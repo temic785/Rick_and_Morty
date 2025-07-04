@@ -1,11 +1,12 @@
 .card {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   background: rgba(25, 28, 36, 0.85);
   border: 2px solid #59e6c1;
   border-radius: 16px;
   padding: 24px;
   width: 320px;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   color: #e0ffe3;
   box-shadow: 0 0 10px #59e6c1,
@@ -29,5 +30,21 @@
     border: 2px solid #3bd6b0;
     object-fit: cover;
     transition: transform 0.3s ease;
+  }
+}
+
+.info {
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  color: #a3d9c1;
+
+  p {
+
+    margin: 4px 0;
+
+    strong {
+      color: #59e6c1;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { getLayout } from "@/pages/Layout/Layout"
+import { getLayout } from "@/components/Layout/Layout"
 import styles from "./404.module.scss"
 import Link from "next/link"
 
