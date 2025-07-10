@@ -1,5 +1,5 @@
-import { getLayout } from "@/components/Layout/Layout"
-import styles from "./404.module.scss"
+"use client"
+import styles from "./not-found.module.scss"
 import Link from "next/link"
 
 const NotFound = () => {
@@ -18,5 +18,4 @@ const NotFound = () => {
   )
 }
 
-NotFound.getLayout = getLayout
 export default NotFound

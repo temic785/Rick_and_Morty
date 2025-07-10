@@ -1,31 +1,21 @@
 import styles from "@/styles/Home.module.css"
 import { CharacterCard } from "@/components/Card/CharacterCard/CharacterCard"
 import { HeadMeta } from "@/components/HeadMeta/HeadMeta"
-import { getLayout } from "@/components/Layout/Layout"
 import Link from "next/link"
-import { API } from "@/assets/api/api"
 import { CharacterType, ResponseType } from "@/assets/api/rick-and-morty-api"
 
-export const getStaticProps = async () => {
-  const characters = await API.rickAndMorty.getCharacters()
-  return {
-    props: {
-      characters,
-    },
-  }
-}
-type PropsType = {
-  characters: ResponseType<CharacterType>
+const getCharacters = async (): Promise<ResponseType<CharacterType>> => {
+  const res = await fetch(`https://rickandmortyapi.com/api/character`)
+  return await res.json()
 }
 
-function Characters(props: PropsType) {
-  const { characters } = props
-
+export default async function Characters() {
+  const { results } = await getCharacters()
   return (
     <>
       <HeadMeta title={"Characters"} />
       <div className={styles.grid}>
-        {characters.results.map((character) => (
+        {results.map((character) => (
           <Link key={character.id} href={`/characters/${character.id}`}>
             <CharacterCard character={character} />
           </Link>
@@ -34,6 +24,3 @@ function Characters(props: PropsType) {
     </>
   )
 }
-
-Characters.getLayout = getLayout
-export default Characters

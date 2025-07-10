@@ -40,3 +40,17 @@ a {
     color-scheme: dark;
   }
 }
+.main {
+
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: #e0ffe3;
+  min-height: 100svh;
+  padding: 96px 80px 80px;
+
+
+
+}
